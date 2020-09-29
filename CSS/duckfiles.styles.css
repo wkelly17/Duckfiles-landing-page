@@ -1,0 +1,282 @@
+/* !Duckfiles project.  Done without grid or flexbox purposely for beginner's practice on August 17 2020 */
+/* ==== Basic CSS Reset ==== */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* ==== End CSS Reset ==== */
+
+/* % --------------- COLORS --------------- */
+/* --gray: hsla(220, 6%, 91%, 1);
+
+
+/* Global rules */
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.clear-fix {
+  clear: both;
+}
+
+/* --------- TOP HEADER SECTION --------- */
+
+.top-header {
+  position: relative;
+  height: 3rem;
+  padding: 5px 0;
+  overflow: hidden;
+}
+
+.header-logo {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1.75rem;
+  color: #666;
+}
+
+.top-nav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-left: 30px;
+}
+
+.top-nav li {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.top-nav a {
+  padding: 30px 5px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+  color: #444;
+  text-decoration: none;
+}
+
+.top-nav a:hover {
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8977272727272727) 59%,
+    rgba(221, 221, 221, 1) 86%
+  );
+}
+
+/* ------------ HERO SECTION ------------ */
+.hero-section {
+  padding: 20px 0;
+  background: rgb(8, 118, 187);
+  background: radial-gradient(
+    circle at center,
+    rgba(8, 118, 187, 1) 59%,
+    rgba(7, 103, 163, 1) 86%
+  );
+  color: #ddd;
+}
+
+.hero-copy {
+  float: left;
+  margin-top: 20px;
+  width: 60%;
+}
+
+.hero-copy h2 {
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+
+.hero-copy h3 {
+  font-weight: 400;
+  margin: 15px 0;
+}
+
+.hero-copy p {
+  width: 70%;
+  font-size: 0.9rem;
+}
+
+/* -------------- HERO NAV -------------- */
+
+.hero-nav-outter {
+  position: relative;
+  background: #efefef;
+  margin-bottom: 70px;
+}
+
+.hero-nav-outter:after {
+  content: "";
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  box-shadow: 0 10px 10px -10px rgb(160, 155, 155);
+  z-index: -1;
+}
+
+.hero-nav {
+  height: 4rem;
+  overflow: hidden;
+}
+
+.hero-nav ul {
+  display: inline-block;
+}
+
+.hero-nav li {
+  display: inline-block;
+  position: relative;
+  box-shadow: 22px 0px 0px -20px rgb(182, 179, 179);
+}
+
+.hero-nav li:last-child {
+  box-shadow: none;
+}
+
+.hero-nav a {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.hero-nav a:hover {
+  background: #fff;
+  color: #111;
+}
+
+.hero-arrows {
+  text-align: center;
+  margin-left: 5px;
+  border: 1px solid #000;
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+}
+
+/* ------------ ABOUT SECTION ----------- */
+
+.about-card {
+  float: left;
+  width: calc(100% / 3);
+  padding-right: 45px;
+}
+
+.about-card h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.about-card p {
+  width: 80%;
+}
+
+.about-card a {
+  float: right;
+  padding: 5px;
+  margin-top: 10px;
+  font-size: 0.65rem;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 25px;
+  background: rgb(239, 239, 239);
+  background: linear-gradient(
+    180deg,
+    rgba(239, 239, 239, 1) 20%,
+    rgba(188, 188, 188, 1) 78%
+  );
+  border: 1px solid #777;
+}
+
+.about-blockquote {
+  width: 80%;
+  margin: 50px auto;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #555;
+}
+
+/* ------------ NEWS SECTION ------------ */
+
+.news-card {
+  float: left;
+  width: calc(100% / 4);
+  padding: 0 20px;
+  color: #555;
+}
+
+.news-card li {
+  list-style-type: circle;
+  font-size: 0.8rem;
+  line-height: 2;
+}
+
+.news-card img {
+  width: 100%;
+  height: 125px;
+}
+.news-title {
+  color: #333;
+}
+
+.news-title-secondary {
+  margin: 15px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.news-card p {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.news-bottom-arrows-container {
+  width: max-content;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.bottom-hero-arrow {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid #000;
+}
